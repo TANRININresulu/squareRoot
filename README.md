@@ -1,6 +1,37 @@
-# squareRoot
-Square Root Solver
+# Square Root Solver
 
+```js
+function karekök (sayı)
+{
+    var karekökü, karesi;
+    var altLimit = 0, üstLimit = sayı;
+
+    karekökü = (altLimit + üstLimit) / 2;
+    var tekrar = 0;
+
+    var sonDeğer;
+    do
+    {
+        sonDeğer = karekökü;
+        tekrar++;
+
+        karesi = karekökü * karekökü;
+
+        if (karesi > sayı)
+            üstLimit = karekökü;
+        else if (karesi < sayı)
+            altLimit = karekökü;
+
+        karekökü = (altLimit + üstLimit) / 2;
+
+        // console.log(karekökü);
+    }
+    while (karesi != sayı && tekrar < 190 && sonDeğer != karekökü);
+
+    return karekökü;
+}
+```
+for runnig it:
 ```
 bun run karekök.js
 ```
